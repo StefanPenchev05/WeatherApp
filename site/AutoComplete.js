@@ -6,7 +6,7 @@ let suggestionList = document.getElementById("list");
 fetch("https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json")
     .then(res => res.json())
     .then(data => {
-        // Add event listener to the input element for keyup event
+        // Add event listener to the input element for keyup eventt
         input.addEventListener("keyup", event => {
             // Filter the city data based on the input value
             let matchingCity = data.filter(city => city.name.toLowerCase().startsWith(input.value.toLowerCase()));
@@ -17,7 +17,7 @@ fetch("https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json
 
 // Function to render the suggestions
 function renderSuggestion(cities) {
-    
+
     // Clear the existing suggestions
     suggestionList.innerHTML = '';
     
