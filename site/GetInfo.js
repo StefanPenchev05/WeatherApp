@@ -4,13 +4,20 @@ const weatherData = document.getElementById("weather_data");// getting the conta
 
 const formEl = document.querySelector("form")
 
-//when button is pressed gets the name of the city and calls the getWeatherData function
-formEl.addEventListener("submit", (event) => 
-{
-    event.preventDefault();
+document.addEventListener('myCustomEvent', function() {
+
+    // The event has been triggered, perform actions here
     const cityInput = document.getElementById("city_input").value;
     getWeatherData(cityInput);
-});
+  });
+  
+  // Add the form submission event listener
+  formEl.addEventListener("submit", event => {
+      event.preventDefault();
+      const cityInput = document.getElementById("city_input").value;
+      getWeatherData(cityInput);
+  });
+  
 
 //fetches info for the city and fills the querySelector setions with the info
 async function getWeatherData(cityInput)

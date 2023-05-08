@@ -17,6 +17,7 @@ fetch("https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json
 
 // Function to render the suggestions
 function renderSuggestion(cities) {
+    
     // Clear the existing suggestions
     suggestionList.innerHTML = '';
     
@@ -29,8 +30,17 @@ function renderSuggestion(cities) {
         suggestion.addEventListener("click", event => {
             // Set the input value to the selected city name
             input.value = city.name;
+
             // Clear the suggestion list
             suggestionList.innerHTML = ``;
+
+            //trigger the event of Get Weather
+            // Define the custom event
+            const customEvent = new Event('myCustomEvent');
+
+            // Dispatch the custom event to trigger it in File B
+            document.dispatchEvent(customEvent);
+
         });
         
         // Append the suggestion element to the suggestion list
