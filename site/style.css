@@ -5,6 +5,12 @@ body
     background-color: "#f7f7f7";
 }
 
+#suggestions {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+  }
+
 .container
 {
     background-color: white;

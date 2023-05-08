@@ -1,9 +1,10 @@
-const apikey = "166cd4304640df33421572aeffaee337";
+const apikey = "166cd4304640df33421572aeffaee337";// the api for the open weather site
 
-const weatherData = document.getElementById("weather_data");
+const weatherData = document.getElementById("weather_data");// getting the container for weather data
 
 const formEl = document.querySelector("form")
 
+//when button is pressed gets the name of the city and calls the getWeatherData function
 formEl.addEventListener("submit", (event) => 
 {
     event.preventDefault();
@@ -11,7 +12,7 @@ formEl.addEventListener("submit", (event) =>
     getWeatherData(cityInput);
 });
 
-
+//fetches info for the city and fills the querySelector setions with the info
 async function getWeatherData(cityInput)
 {
     try{
@@ -32,6 +33,6 @@ async function getWeatherData(cityInput)
          weatherData.querySelector(".description").textContent = `${data.weather[0].description}`;
          weatherData.querySelector(".details").innerHTML = details.map((detail) => `<div>${detail}</div>`).join("");
     } catch(error){
-
+        weatherData.querySelector(".icon").textContent = `There is something wrong, please try again later!`
     }
 }
