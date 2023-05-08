@@ -5,4 +5,4 @@ Shows:
                   -Celsius
     -Humidity   -Feels Like     -Wind Speed
 
-Gives you the feature for autocomplete in the input for city(you need to be careful, due to masive json file for Cities names)
+Gives you the feature for AutoComplete in the input for city(you need to be careful, due to masive json file for Cities names)
