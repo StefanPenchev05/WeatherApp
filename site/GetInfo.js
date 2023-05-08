@@ -34,5 +34,9 @@ async function getWeatherData(cityInput)
          weatherData.querySelector(".details").innerHTML = details.map((detail) => `<div>${detail}</div>`).join("");
     } catch(error){
         weatherData.querySelector(".icon").textContent = `There is something wrong, please try again later!`
+        weatherData.querySelector(".temperature").textContent = ``;
+        weatherData.querySelector(".description").textContent = ``;
+        weatherData.querySelector(".details").innerHTML = ``;
+
     }
 }
